@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Skin Disease Detector 2.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="./static/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <section id="Top">
+        <div class="warpper">
+            <h1>Skin Disease Detector 2.0</h1>
+            <p class="text-center font-weight-normal mt-4 mb-3"><em> <b>Skin Disease Detection Classifier can classify 7
+                        type of skin
+                        diseases :</b></em> <b>
+                    Actinic Keratoses, Basal Cell Carcinoma, Benign Keratosis, Dermatofibroma, Melanoma, Melanocytic
+                    Nevi and Vascular skin lesion.<br>
+                    Trained model : MobileNet, Accuracy : 95% </b>
+            </p>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <div class="form-group col-md-6">
+                <form id="upload-file" method="post" enctype="multipart/form-data" class="input-group">
+                    <input type="text" class="form-control" readonly>
+                    <span class="input-group-btn">
+                        <span class="btn btn-dark btn-file">
+                            Upload Image <input type="file" name="file" id="imgInp" accept=".png, .jpg, .jpeg">
+                        </span>
+                        <button type="button" class="btn btn-dark" id="btn-predict">Predict</button>
+                    </span>
+
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="Bottom">
+        <div class="warpperbottom">
+            <img id='img-upload' class="col-md-6" />
+            <div class="predclass col-md-8">
+                <h2><b class="result"> </b></h2>
+
+                <div class="Actinic"> <b>
+                        <p> Actinic Keratoses (Solar Keratoses) and intraepithelial Carcinoma (Bowen’s disease) are
+                            common non-invasive, variants of squamous cell car- cinoma that can be treated locally
+                            without surgery.</p>
+
+                        <h2> Prevention and control </h2>
+                        <ul>
+                            <li>Avoid prolonged exposure to the sun, especially during peak hours (10 am to 4 pm).</li>
+                            <li>Wear protective clothing, such as hats and long-sleeved shirts. </li>
+                            <li>Avoid tanning beds and sunlamps.</li>
+                            <li>Use sunscreen with an SPF of at least 30, and apply it 20-30 minutes before going
+                                outside. Reapply every 2 hours or after swimming or sweating.</li>
+                            <li>Be aware of any changes in your skin, such as new or changing moles, and consult a
+                                dermatologist if you notice anything suspicious.</li>
+                        </ul>
+                    </b>
+                </div>
+                <div class="Basal">
+                    <b>
+                        <p>Basal cell carcinoma is a common variant of epithelial skin cancer that rarely metastasizes
+                            but grows destructively if untreated. It appears in different morphologic variants (flat,
+                            nodular, pigmented, cystic, etc).</p>
+                        <h2> Prevention and control </h2>
+                        <ul>
+                            <li>Sun protection: Avoid prolonged sun exposure and protect your skin from harmful UV rays
+                                by wearing protective clothing, hats, and sunglasses. Also, apply a broad-spectrum
+                                sunscreen with an SPF of 30 or higher every two hours. </li>
+                            <li>Quit smoking: Smoking can damage your skin and increase your risk of developing basal
+                                cell carcinoma. Quitting smoking can lower your risk and improve your overall health.
+                            </li>
+                            <li>Seek medical attention: If you notice any suspicious spots or growths on your skin, seek
+                                medical attention promptly. Your doctor can perform a biopsy and determine if it is
+                                cancerous. Early detection and treatment can prevent the cancer from spreading and
+                                improve your chances of a full recovery.</li>
+                        </ul>
+                    </b>
+                </div>
+                <div class="Benign">
+                    <b>
+                        <p>Benign Keratosis is also called Seborrheic Keratoses (SK) are the most common skin lesion. It tend to be most common on sun-exposed areas in older patients. Some patients may have dozens of them, most commonly on the face, neck and trunk.</p>
+                        <h2> Prevention and control </h2>
+                        <ul>
+                            <li>Limit your time in the sun. Especially avoid time in the sun between 10 a.m. and 2 p.m. And avoid staying in the sun so long that you get a sunburn or a suntan</li>
+                            <li>Cover up. For extra protection from the sun, wear tightly woven clothing that covers your arms and legs. Also wear a broad-brimmed hat. This provides more protection than does a baseball cap or golf visor.</li>
+                            <li>Check your skin regularly and report changes to your health care provider. Examine your skin regularly, looking for the development of new skin growths or changes in existing moles, freckles, bumps and birthmarks. With the help of mirrors, check your face, neck, ears and scalp. Examine the tops and undersides of your arms and hands.</li>
+                        </ul>
+                    </b>
+                </div>
+                <div class="Dermatofibroma">
+                    <b>
+                        <p>Dermatofibroma is a common benign skin growth that usually occurs on the legs of adults. While it is not typically a serious condition, it can cause discomfort and cosmetic concern.  </p>
+                        <h2> Prevention and control </h2>
+                        <ul>
+                            <li>Keep your skin healthy: Good skin health is important for preventing dermatofibromas. This includes keeping your skin clean and moisturized, avoiding harsh soaps and other skin irritants, and maintaining a healthy diet and lifestyle.</li>
+                            <li>Treat existing dermatofibromas: If you already have dermatofibromas, there are a few options for treatment. In some cases, the growths can be removed surgically. Other treatments may include cryotherapy (freezing the growths) or laser therapy.</li>
+                            <li>See a dermatologist: If you are concerned about dermatofibromas or notice any unusual growths on your skin, it's important to see a dermatologist for an evaluation. A dermatologist can help diagnose the condition and provide treatment options.</li>
+                        </ul>
+                    </b>
+                </div>
+                <div class="Melanoma">
+                    <b>
+                        <p>Melanoma is a type of skin cancer that can be very dangerous if not detected and treated early. Melanoma is a malignant neoplasm derived from melanocytes that may appear in different variants. If excised in an early stage it can be cured by simple surgical excision. Melanomas can be invasive or non-invasive. We included all variants of melanoma including melanoma in situ, but did exclude non-pigmented, subungual, ocular or mucosal melanoma.</p>
+                        <h2> Prevention and control </h2>
+                        <ul>
+                            <li>Wear protective clothing: Whenever you are outside, especially during peak sunlight hours, make sure to wear protective clothing such as long-sleeved shirts, hats, and sunglasses. This will reduce your exposure to harmful UV radiation.</li>
+                            <li>Check your skin regularly: Perform self-examinations of your skin regularly to detect any changes, such as new moles, changes in size or shape, or bleeding or itching. If you notice anything suspicious, contact your healthcare provider.</li>
+                            <li>Get professional skin checks: Visit a dermatologist for a full-body skin check at least once a year. This can help detect any potential skin cancers, including melanoma, at an early stage when they are most treatable.</li>
+                        </ul>
+                    </b>
+                </div>
+                <div class="Melanocytic">
+                    <b>
+                        <p>Melanocytic diseases are a group of skin conditions that result from the abnormal growth of pigment-producing cells called melanocytes. These conditions include benign nevi (moles) and malignant melanoma.</p>
+                        <h2> Prevention and control </h2>
+                        <ul>
+                            <li>Avoid tanning beds: Tanning beds emit UV radiation and can increase your risk of melanoma. It's best to avoid them altogether.</li>
+                            <li>Know your risk factors: Some risk factors for melanocytic disease, such as having fair skin, red or blonde hair, or a history of sunburns or tanning bed use, are beyond your control. However, knowing your risk factors can help you take steps to reduce your risk and catch any potential issues early on.</li>
+                            <li>Avoid tanning beds: Tanning beds emit UV radiation and can increase your risk of melanoma. It's best to avoid them altogether.</li>
+                        </ul>
+                    </b>
+                </div>
+                <div class="Vascular">
+                    <b>
+                        <p> Vesicular skin lesions are nothing but blisters. They are small sacs filled with either clear or pus-colored fluid. They are typically 5-10mm in diameter. They are delicate and can burst due to pressure or friction. When a vesicle bursts, it becomes a vesicular eruption. Once they burst, the liquid spreads to the surrounding skin and leaves a white or yellow flaky crust when it dries.</p>
+                        <h2> Prevention and control </h2>
+                        <ul>
+                            <li>Maintaining a healthy weight: Being overweight or obese puts extra pressure on the veins, which can increase the risk of developing varicose veins.</li>
+                            <li>Regular exercise: Engaging in regular physical activity can improve blood circulation, which can reduce the risk of developing vascular skin lesions.</li>
+                            <li>Wearing compression stockings: Compression stockings help improve blood flow and reduce the risk of developing varicose veins.</li>
+                        </ul>
+                    </b>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./static/js/main.js" type="text/javascript"></script>
+</body>
+
+</html>
